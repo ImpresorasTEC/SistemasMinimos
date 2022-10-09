@@ -16,6 +16,7 @@ Store NUMS
 Skipcond 400
 Jump Loop
 
+/ Esto solo es para verificar que los datos se almacenaron
 Load NUMS
 Add N
 Store NUMS
