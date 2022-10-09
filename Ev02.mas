@@ -3,23 +3,23 @@
 / Ernesto Miranda Solis - A01656828
 / Sebastian Iñigo López - A01661179
 
-Load START
-Store PTR
-Loop, Input
-StoreI PTR
-Load PTR
-Add One
-Store PTR
-Load N
-Subt One
-Store N
-Skipcond 400
-Jump Loop
-Halt
+Load START / Carga el valor inicial para guardar valores en memoria (apuntador)
+Store PTR / Guarda el valor en el apuntador operativo
+Loop, Input / Espera el input
+StoreI PTR / Guarda el dato en la dirección de memoria apuntada
+Load PTR / Carga el valor del apuntador
+Add One / Le suma uno a la dirección de memoria 
+Store PTR / Guarda el nuevo valor del apuntador
+Load N / Carga el valor de N
+Subt One / Le resta uno al valor de N
+Store N / Guarda el nuevo valor de N
+Skipcond 400 / Salta la linea si N es cero
+Jump Loop / Salta a la linea de Loop
+Halt / Termina el programa
 
 / Variabes a utilizar
-START, HEX 30
-PTR, HEX 0
-N, DEC 50
+START, HEX 30 / Variable inicial para apuntar la memoria
+PTR, HEX 0 / Apuntador operativo
+N, DEC 50 / Cantidad de inputs esperada
 / Constantes
-One, DEC 1
+One, DEC 1 / Un uno decimal
