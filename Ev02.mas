@@ -1,0 +1,42 @@
+﻿/ Programa que almacena las primeras 50 mediciones de un sensor en memoria
+/ Román Mauricio Elias Valencia - A01656603
+/ Ernesto Miranda Solis - A01656828
+/ Sebastian Iñigo López - A01661179
+
+Load START
+Store PTR
+Loop, Input
+StoreI PTR
+Load PTR
+Add One
+Store PTR
+Load NUMS
+Subt One
+Store NUMS
+Skipcond 400
+Jump Loop
+
+Load NUMS
+Add N
+Store NUMS
+Load START
+Store PTR
+Loop2, LoadI PTR
+Output
+Load PTR
+Add One
+Store PTR
+Load NUMS
+Subt One
+Store NUMS
+Skipcond 400
+Jump Loop2
+
+Halt
+
+/ Variabes a utilizar
+START, HEX 110
+PTR, HEX 0
+NUMS, DEC 50
+One, DEC 1
+N, DEC 50
