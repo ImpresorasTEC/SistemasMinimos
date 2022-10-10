@@ -3,8 +3,6 @@
 / Ernesto Miranda Solis - A01656828
 / Sebastian Iñigo López - A01661179
 
-Load START / Carga el valor inicial para guardar valores en memoria (apuntador)
-Store PTR / Guarda el valor en el apuntador operativo
 Loop, Input / Espera el input
 StoreI PTR / Guarda el dato en la dirección de memoria apuntada
 Load PTR / Carga el valor del apuntador
@@ -18,8 +16,7 @@ Jump Loop / Salta a la linea de Loop
 Halt / Termina el programa
 
 / Variabes a utilizar
-START, HEX 30 / Variable inicial para apuntar la memoria
-PTR, HEX 0 / Apuntador operativo
+PTR, HEX 30 / Apuntador operativo, inicia en 30, pero puede cambiar
 N, DEC 50 / Cantidad de inputs esperada
 / Constantes
 One, DEC 1 / Un uno decimal
