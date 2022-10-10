@@ -1,0 +1,35 @@
+/ Ejemplo 4.2
+/ Román Mauricio Elias Valencia - A01656603
+/ Ernesto Miranda Solis - A01656828
+/ Sebastian Iñigo López - A01661179
+
+Load Addr
+Store Next
+Load Num
+Subt One
+Store Ctr
+Loop, Load Sum
+AddI Next
+Store Sum
+Load Next
+Add One
+Store Next
+Load Ctr
+Subt One
+Store Ctr
+Skipcond 000
+
+Jump Loop
+Halt
+
+Addr, HEX 017
+Next, HEX 0
+Num, DEC 5
+Sum, DEC 0
+Ctr, HEX 0
+One, DEC 1
+DEC 10
+DEC 15
+DEC 20
+DEC 25
+DEC 30
