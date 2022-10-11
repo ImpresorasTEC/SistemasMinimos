@@ -16,7 +16,7 @@ Jump Loop / Salta a la linea de Loop
 Halt / Termina el programa
 
 / Variabes a utilizar
-PTR, HEX 30 / Apuntador operativo, inicia en 30, pero puede cambiar
+PTR, HEX E / Apuntador operativo, inicia en la direccion E, pero puede cambiar
 N, DEC 50 / Cantidad de inputs esperada
 / Constantes
 One, DEC 1 / Un uno decimal
