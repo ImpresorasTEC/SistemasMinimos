@@ -1,0 +1,34 @@
+/ Programa que invierte 4 localidades de memoria
+/ Román Mauricio Elias Valencia - A01656603
+/ Ernesto Miranda Solis - A01656828
+/ Sebastian Iñigo López - A01661179
+
+Loop, LoadI LEFT / Carga el valor dentro de la direccion LEFT
+	Store VAL / Guarda el valor en la variable temporal
+	LoadI RIGHT / Carga el valor dentro de la direccion RIGHT
+	StoreI LEFT / Guarda el valor en la direccion LEFT
+	Load VAL / Carga el valor de la variable temporal
+	StoreI RIGHT / Guarda ese valor en la direccion RIGHT
+	Load LEFT / Carga el valor LEFT
+	Add One / Le agrega uno al valor LEFT
+	Store LEFT / Guarda el nuevo valor
+	Load RIGHT / Carga el valor RIGHT
+	Subt One / Le resta uno al valor RIGHT
+	Store RIGHT / Guarda el valor en RIGHT
+	Load N / Carga el valor del contador
+    Subt One / Le resta uno al contador
+    Store N / Guarda el nuevo valor
+	Skipcond 000 / Si el contador es menor a cero, salta a la siguiente condicion
+    Jump Loop / Da un salto al Loop
+EndLoop, halt / Termina el programa
+
+LEFT, HEX 17 / Apuntador al primer dato en la memoria
+VAL, DEC 0 / Variable temporal 
+RIGHT, HEX 1A / Apuntador al último dato en memoria
+One, DEC 1 / Un uno decimal
+N, DEC 1 / El contador
+/ Numeros aleatorias
+DEC 5 
+DEC 10
+DEC 15
+DEC 20
