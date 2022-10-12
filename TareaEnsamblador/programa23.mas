@@ -1,0 +1,29 @@
+/ Ejemplo 4.4 recorre una string terminada en nulo
+/ Román Mauricio Elias Valencia - A01656603
+/ Ernesto Miranda Solis - A01656828
+/ Sebastian Iñigo López - A01661179
+
+Getch, LoadI Chptr / Carga el caracter en la direccion Chptr
+	Skipcond 400 / Si AC = 0, salta a la siguiente instruccion
+    Jump Outp / Salta a Outp
+    Halt
+Outp, Output / Hace un output del caracter
+	Load Chptr / Carga el valor de Chptr
+    Add One / Agrega uno al valor de Chptr
+    Store Chptr / Guarda el nuevo valor
+    Jump Getch / repite el proceso
+One, DEC 1 / Un uno decimal
+Chptr, Hex B / Apuntador operativo
+Dec 072 / H / Empieza la definicion de la string
+DEC 101 / e 
+DEC 108 / l
+DEC 108 / l
+DEC 111 / o
+DEC 032 / [espacio]
+DEC 119 / w
+DEC 111 / o
+DEC 114 / r
+DEC 108 / l
+DEC 100 / d
+DEC 033 / !
+DEC 000 / [null]
