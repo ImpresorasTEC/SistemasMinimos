@@ -1,0 +1,28 @@
+/ Programa que toma una serie de cinco localidades de memoria y 
+/ a cada una suma un valor
+/ Román Mauricio Elias Valencia - A01656603
+/ Ernesto Miranda Solis - A01656828
+/ Sebastian Iñigo López - A01661179
+
+Loop, Input / Espera un numero a sumar
+	AddI PTR / Suma el valor apuntado en la direccion PTR
+    StoreI PTR / Guarda la suma en la direccion PTR
+    Load PTR / Carga el valor de la direccion PTR
+	Add One / Agrega uno al valor del PTR
+	Store PTR / Guarda el nuevo valor 
+    Load N / Carga el contador
+    Subt One / Resta uno al valor del contador
+	Store N / Guarda el nuevo valor
+	Skipcond 000 / Si el contador es menor a cero, salta a la siguiente condicion
+    Jump Loop / Da un salto al Loop
+EndLoop, halt / Termina el programa
+
+PTR, HEX F / Apuntador operativo en la memoria
+One, DEC 1 / Un uno decimal
+N, DEC 4 / El contador
+/ Numeros aleatorios en memoria
+DEC 3
+DEC 5
+DEC 1
+DEC 2
+DEC 8
