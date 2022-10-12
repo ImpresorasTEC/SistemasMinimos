@@ -1,0 +1,36 @@
+/ Programa que da la longitud de un string, 
+/ del cual se conoce la dirección donde inicia y 
+/ termina cuando encuentra el NULL, esta en ASCII
+/ Román Mauricio Elias Valencia - A01656603
+/ Ernesto Miranda Solis - A01656828
+/ Sebastian Iñigo López - A01661179
+
+Validate, LoadI Chptr / Cargamos el valor apuntado por Chptr
+	Skipcond 400 / Si AC = 0 salta la instruccion
+    Jump Count / Hace un salto a Jump 
+    Load N / Carga N
+    Output / Output del valor N
+    Halt / Termina el programa
+Count, Load N / Carga el valor de N
+	Add One / Agrega uno al contador
+    Store N / Guarda el nuevo valor
+    Load Chptr / Carga el valor de Chptr
+    Add One / Agrega uno al valor 
+    Store Chptr / Guarda el nuevo valor
+	Jump Validate / Salta a validar la string
+One, DEC 1 / Un uno decimal
+Chptr, Hex 10 / Apuntador operativo
+N, DEC 0 / Contador 
+Dec 072 / H / Empieza la definicion de la string
+DEC 101 / e 
+DEC 108 / l
+DEC 108 / l
+DEC 111 / o
+DEC 032 / [espacio]
+DEC 119 / w
+DEC 111 / o
+DEC 114 / r
+DEC 108 / l
+DEC 100 / d
+DEC 033 / !
+DEC 000 / [null]
