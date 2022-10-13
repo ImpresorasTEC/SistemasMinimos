@@ -1,0 +1,47 @@
+﻿/ Realiza un programa que calcule: Y=X-2*A-3*B-4*C (programa5.mas).
+/ Román Mauricio Elias Valencia - A01656603
+/ Ernesto Miranda Solis - A01656828
+/ Sebastian Iñigo López - A01661179
+
+Clear
+Input
+Store X
+Input
+Store A
+Input
+Store B
+Input
+Store C
+
+Load A
+Add A
+Store A
+Output
+
+Load B
+Add B
+Add B
+Store B
+Output
+
+Load C
+Add C
+Add C
+Add C
+Store C
+Output
+
+Load X
+Subt A
+Subt B
+Subt C
+Store Y
+Output
+Halt
+
+A, Dec 0
+B, Dec 0
+C, Dec 0
+
+X, Dec 0
+Y, Dec 0
