@@ -1,7 +1,4 @@
-﻿/ Realiza un programa que calcule: Y=X-2*A-3*B-4*C (programa5.mas).
-/ Román Mauricio Elias Valencia - A01656603
-/ Ernesto Miranda Solis - A01656828
-/ Sebastian Iñigo López - A01661179
+/ Realiza un programa que calcule: Y=X-2*A-3*B-4*C (programa5.mas).
 
 Clear
 Input
