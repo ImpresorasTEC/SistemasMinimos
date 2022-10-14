@@ -1,8 +1,7 @@
+/ Programa9.mas
+
 / Programa que toma una serie de cinco localidades de memoria y 
 / a cada una suma un valor
-/ Román Mauricio Elias Valencia - A01656603
-/ Ernesto Miranda Solis - A01656828
-/ Sebastian Iñigo López - A01661179
 
 Loop, Input / Espera un numero a sumar
 	AddI PTR / Suma el valor apuntado en la direccion PTR
