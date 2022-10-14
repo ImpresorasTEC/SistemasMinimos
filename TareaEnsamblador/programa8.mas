@@ -1,0 +1,33 @@
+﻿/Programa
+LoadI ptr /carga la dirección del pointer
+validate, Load n /valida si el counter llego al limite
+Skipcond 000 /Si el contador es menor a cero salta la condición y acaba el programa
+jump loop
+halt
+loop, loadI ptr /Carga la direccion del pointer
+Add One /Suma un valor a la dirección del pointer
+Store temp /guarda la direccion con la suma
+Load ptr /Carga el apuntador
+Add One /Suma uno para pasar al siguiente
+Store ptr /Guarda el nuevo apuntador
+Load temp /Carga el valor temporal
+AddI ptr /Agrega la dirección del pointer
+StoreI ptr /Guarda la nueva dirección del pointer
+output /Salida de la nueva direccion
+Load n /Carga el contador
+Subt One /Le resta un valor al contador
+Store n /Guarda el nuevo contador
+jump validate /Salta a la validacion
+
+/Variables
+temp, DEC 0 /Variable temporal
+ptr, HEX 16 /apuntador de la memoria
+n, DEC 4 /Contador
+/Constantes
+DEC 5
+DEC 8
+DEC 4
+DEC 2
+DEC 1
+DEC 7
+One, DEC 1 /El valor de uno para sumar y restar
