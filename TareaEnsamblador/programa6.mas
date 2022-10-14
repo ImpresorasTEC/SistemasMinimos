@@ -1,8 +1,5 @@
 / Realiza un programa que calcule: Y=5*(A-B+C)
 / Programa6.mas
-/ Román Mauricio Elias Valencia - A01656603
-/ Ernesto Miranda Solis - A01656828
-/ Sebastian Iñigo López - A01661179
 
 Clear
 Input
