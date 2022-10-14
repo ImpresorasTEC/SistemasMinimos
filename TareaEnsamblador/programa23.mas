@@ -1,7 +1,4 @@
 / Ejemplo 4.4 recorre una string terminada en nulo
-/ Román Mauricio Elias Valencia - A01656603
-/ Ernesto Miranda Solis - A01656828
-/ Sebastian Iñigo López - A01661179
 
 Getch, LoadI Chptr / Carga el caracter en la direccion Chptr
 	Skipcond 400 / Si AC = 0, salta a la siguiente instruccion
