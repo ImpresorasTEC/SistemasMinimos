@@ -1,5 +1,5 @@
-/ Programa que invierte 4 localidades de memoria
 / Programa7.mas
+/ Programa que invierte 4 localidades de memoria
 
 Loop, LoadI LEFT / Carga el valor dentro de la direccion LEFT
 	Store VAL / Guarda el valor en la variable temporal
