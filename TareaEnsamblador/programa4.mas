@@ -1,9 +1,6 @@
 / Programa que da la longitud de un string, 
 / del cual se conoce la dirección donde inicia y 
 / termina cuando encuentra el NULL, esta en ASCII
-/ Román Mauricio Elias Valencia - A01656603
-/ Ernesto Miranda Solis - A01656828
-/ Sebastian Iñigo López - A01661179
 
 Validate, LoadI Chptr / Cargamos el valor apuntado por Chptr
 	Skipcond 400 / Si AC = 0 salta la instruccion
