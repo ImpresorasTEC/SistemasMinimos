@@ -1,3 +1,5 @@
+/ Programa4.mas
+
 / Programa que da la longitud de un string, 
 / del cual se conoce la dirección donde inicia y 
 / termina cuando encuentra el NULL, esta en ASCII
