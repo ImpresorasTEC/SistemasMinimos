@@ -1,4 +1,5 @@
 / Programa7.mas
+
 / Programa que invierte 4 localidades de memoria
 
 Loop, LoadI LEFT / Carga el valor dentro de la direccion LEFT
