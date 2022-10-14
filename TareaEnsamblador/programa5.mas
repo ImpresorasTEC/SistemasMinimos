@@ -1,4 +1,5 @@
-/ Realiza un programa que calcule: Y=X-2*A-3*B-4*C (programa5.mas).
+/ Realiza un programa que calcule: Y=X-2*A-3*B-4*C 
+/ Programa5.mas
 
 Clear
 Input
