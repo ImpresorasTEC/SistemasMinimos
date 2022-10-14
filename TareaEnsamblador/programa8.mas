@@ -1,4 +1,5 @@
-﻿/Programa
+/ Programa8.mas
+
 LoadI ptr /carga la dirección del pointer
 validate, Load n /valida si el counter llego al limite
 Skipcond 000 /Si el contador es menor a cero salta la condición y acaba el programa
