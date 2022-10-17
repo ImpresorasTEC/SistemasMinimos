@@ -1,0 +1,64 @@
+/ Programa que después
+/ de guardar en memoria los datos leídos del sensor, 
+/ obtenga la media estadística de al menos 10 mediciones almacenadas
+
+UsarPTR, Load Inicio
+	Store Ptr
+    Clear
+	Store Suma
+    Store Quot
+    Load Max
+    Store N
+    Load Case
+    Skipcond 800
+    Jump Lectura
+    Jump Sum
+Lectura, Input
+	StoreI Ptr
+	Load Ptr
+    Add One
+	Store Ptr
+    Load N
+    Subt One
+    Store N
+    Skipcond 400
+    Jump Lectura
+    Load One
+    Store Case
+    Jump UsarPTR
+    
+Sum, Load Suma
+    AddI Ptr
+	Store Suma
+    Load Ptr
+    Add One
+	Store Ptr
+    Load N
+    Subt One
+    Store N
+    Skipcond 400
+    Jump Sum
+	Jump Media
+Media, Load Quot
+	Add One
+    Store Quot
+	Load Suma
+	Subt Max
+    Store Suma
+	Skipcond 000
+    Jump Media
+    Load Quot
+    Subt One
+    Output
+	Clear
+    Store Case
+    Jump UsarPTR
+
+Max, DEC 10
+Inicio, HEX 40
+Ptr, HEX 0
+N, DEC 0
+Quot, DEC 0
+Suma, DEC 0
+Case, DEC 0
+One, DEC 1
