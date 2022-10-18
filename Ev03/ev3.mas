@@ -14,8 +14,13 @@ UsarPTR, Load Inicio
     Jump Media
 Lectura, Input
 	StoreI Ptr
-    Add Suma
-    Store Suma
+    Subt FIN
+    Skipcond 400
+    Jump Continue
+    Halt
+Continue, LoadI Ptr 
+	Add Suma
+	Store Suma
 	Load Ptr
     Add One
 	Store Ptr
@@ -52,3 +57,4 @@ Quot, DEC 0
 Suma, DEC 0
 Case, DEC 0
 One, DEC 1
+FIN, HEX FFFF
