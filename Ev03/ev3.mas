@@ -5,16 +5,17 @@
 UsarPTR, Load Inicio
 	Store Ptr
     Clear
-	Store Suma
     Store Quot
     Load Max
     Store N
     Load Case
     Skipcond 800
     Jump Lectura
-    Jump Sum
+    Jump Media
 Lectura, Input
 	StoreI Ptr
+    Add Suma
+    Store Suma
 	Load Ptr
     Add One
 	Store Ptr
@@ -27,18 +28,6 @@ Lectura, Input
     Store Case
     Jump UsarPTR
     
-Sum, Load Suma
-    AddI Ptr
-	Store Suma
-    Load Ptr
-    Add One
-	Store Ptr
-    Load N
-    Subt One
-    Store N
-    Skipcond 400
-    Jump Sum
-	Jump Media
 Media, Load Quot
 	Add One
     Store Quot
@@ -51,6 +40,7 @@ Media, Load Quot
     Subt One
     Output
 	Clear
+    Store Suma
     Store Case
     Jump UsarPTR
 
