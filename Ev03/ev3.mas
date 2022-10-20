@@ -1,60 +1,64 @@
 / Programa que después
 / de guardar en memoria los datos leídos del sensor, 
 / obtenga la media estadística de al menos 10 mediciones almacenadas
+/ Román Mauricio Elias Valencia - A01656603
+/ Ernesto Miranda Solis - A01656828
+/ Sebastian Iñigo López - A01661179
 
-UsarPTR, Load Inicio
-	Store Ptr
-    Clear
-    Store Quot
-    Load Max
-    Store N
-    Load Case
-    Skipcond 800
-    Jump Lectura
-    Jump Media
-Lectura, Input
-	StoreI Ptr
-    Subt FIN
-    Skipcond 400
-    Jump Continue
-    Halt
-Continue, LoadI Ptr 
-	Add Suma
-	Store Suma
-	Load Ptr
-    Add One
-	Store Ptr
-    Load N
-    Subt One
-    Store N
-    Skipcond 400
-    Jump Lectura
-    Load One
-    Store Case
-    Jump UsarPTR
+UsarPTR, Load Inicio / Apuntador a la primera direccion de memoria operativa
+	Store Ptr / Guarda el valor en el apuntador operativo
+    Clear / AC = 0
+    Store Quot / Quot = 0
+    Load Max / Carga maximo valor de espacios 
+    Store N / Guarda en el contador
+    Load Case / Determina que caso ejecutar (media o guardar datos)
+    Skipcond 800 / Si AC > 0, salta la linea
+    Jump Lectura / Salta a lectura
+    Jump Media / Salta a calcular la media
+Lectura, Input / Espera un input
+	StoreI Ptr / Guarda en la direccion que apunta Ptr
+    Subt FIN / AC - FIN => AC - FFFF
+    Skipcond 400 / Si AC = 0, salta la lineaa
+    Jump Continue / Continua la ejecucion
+    Halt / Termina el programa
+Continue, LoadI Ptr / Carga el valor dentro de la direccion Ptr
+	Add Suma / Agrega al valor de la suma
+	Store Suma / Guarda el valor en la suma
+	Load Ptr / Carga el valor Ptr
+    Add One / Ptr + 1
+	Store Ptr / Ptr = Ptr + 1
+    Load N / Carga el contador
+    Subt One / N - 1
+    Store N / N = N - 1
+    Skipcond 400 / Si AC = 0, salta la linea
+    Jump Lectura / Vuelve a leer datos
+    Load One / Carga Uno
+    Store Case / Case = 1
+    Jump UsarPTR / Va a la validacion y setea los valores
     
-Media, Load Quot
-	Add One
-    Store Quot
-	Load Suma
-	Subt Max
-    Store Suma
-	Skipcond 000
-    Jump Media
-    Load Quot
-    Subt One
-    Output
-	Clear
-    Store Suma
-    Store Case
-    Jump UsarPTR
+Media, Load Quot / Carga el cociente
+	Add One / Quot + 1
+    Store Quot / Quot = Quot + 1
+	Load Suma / Carga suma
+	Subt Max / Suma - Max = Suma - 10
+    Store Suma / Suma = Suma - Max = Suma - 10
+	Skipcond 000 / Si AC < 0, salta la linea
+    Jump Media / Salta a media
+    Load Quot / Carga el cociente
+    Subt One / Quot - 1
+    Output / Output del cociente
+	Clear / AC = 0
+    Store Suma / Suma = 0
+    Store Case / Case = 0
+    Jump UsarPTR / Va a settear los valores originales
 
-Max, DEC 10
-Inicio, HEX 40
-Ptr, HEX 0
-N, DEC 0
-Quot, DEC 0
-Suma, DEC 0
-Case, DEC 0
-One, DEC 1
-FIN, HEX FFFF
+Max, DEC 10 / Maxima cantidad de espacios
+Inicio, HEX 40 / Valor inicial del apuntador
+Ptr, HEX 0 / Apuntador operativo
+N, DEC 0 / Contador
+Quot, DEC 0 / Cociente
+Suma, DEC 0 / Suma
+Case, DEC 0 / Caso de validacion
+/ Constantes
+One, DEC 1 / Uno decimal
+FIN, HEX FFFF / Valor para finalizar el programa
